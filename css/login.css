@@ -1,0 +1,85 @@
+body {
+
+    background-image: url('../img/login.png'); /* 背景图片 */
+    background-size: cover; /* 覆盖整个元素 */
+    background-position: center; /* 居中 */
+    background-attachment: fixed; /* 固定背景 */
+    
+    display: flex;          /* 启用flex布局 */
+    justify-content: center; /* 水平居中 */
+    align-items: center;    /* 垂直居中 */
+    
+}
+
+.main-bg {
+
+    width: clamp(400px, 50vw, 700px);
+    height: clamp(300px, 60vh, 500px);
+    background-color: rgba(255, 255, 255, 50%);
+    border-radius: 60px;
+    backdrop-filter: blur(20px); /* 模糊程度 */
+    -webkit-backdrop-filter: blur(10px); /* Safari 兼容 */
+    box-shadow: 0px 20px 20px rgba(200, 200, 200, 30%); /* 阴影 */
+
+    display: flex;          /* 启用flex布局 */
+    justify-content: center; /* 水平居中 */
+    align-items: center;    /* 垂直居中 */
+    flex-direction: column; /* 竖向排列 */
+
+    font-size: 3.5rem;
+    font-weight: 500;
+
+    animation: fadeInUp 0.5s ease-out forwards; /* 向上进入动画 */
+    opacity: 0; /* 初始状态不可见 */
+
+}
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px); /* 从下方50px开始 */
+    } to {
+        opacity: 1;
+        transform: translateY(0); /* 移动到原始位置 */
+    }
+}
+
+.input-bg {
+    width: clamp(300px, 40vw, 600px);
+    height: 75px;
+    border-radius: 60px;
+    backdrop-filter: blur(20px); /* 模糊程度 */
+    -webkit-backdrop-filter: blur(10px); /* Safari 兼容 */
+
+    display: flex;          /* 启用flex布局 */
+    align-items: center;    /* 垂直居中 */
+    flex-direction: row-reverse; /* 主轴方向反转，从右向左排列 */
+
+}
+
+#key-input {
+    width: clamp(190px, 27vw, 490px);
+    height: 75px;
+    background: transparent; /* 设置背景透明 */
+    border: none; /* 移除输入框的边框 */
+    outline: none; /* 移除聚焦时的外轮廓线 */
+    font-family: 'coustom-size', sans-serif;
+    font-size: 2rem;
+}
+
+#key-btn {
+    width: 110px;
+    height: 76px;
+    background-color: rgb(171, 191, 243);
+    border-radius: 60px;
+    border: none; /* 移除输入框的边框 */
+    outline: none; /* 移除聚焦时的外轮廓线 */
+    font-family: 'coustom-size', sans-serif;
+    font-size: 2rem;
+
+    cursor: pointer; /* 鼠标悬停时显示指针手形 */
+    transition: background-color 0.25s ease; /* 添加背景颜色变化的过渡效果 */
+
+}
+#key-btn:active {
+    background-color: rgb(226, 242, 254); /* 点击时背景颜色变为白色 */
+}
