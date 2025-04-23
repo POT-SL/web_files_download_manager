@@ -2,6 +2,7 @@
 一个浏览并下载文件的史山，使用flask+typescript
 
 使用的话要更改server.py里面的 路径 和 防君子密钥
+使用linux，win我没测试过（）
 
 有很多看不懂的地方可以喂给deepseek，因为我也看不懂（）
 
